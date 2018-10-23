@@ -74,6 +74,9 @@ ADD_LIBRARY(graphqlparser SHARED
   c/GraphQLParser.cpp
   GraphQLParser.cpp)
 
+TARGET_INCLUDE_DIRECTORIES(graphqlparser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+TARGET_INCLUDE_DIRECTORIES(graphqlparser PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
+
 # Enable this and remove CMAKE_CXX_FLAGS fiddle above when we are able
 # to upgrade to CMake 2.8.12. Blocker seems to be Travis CI being on
 # Ubuntu Precise; Trusty has 2.8.12.
