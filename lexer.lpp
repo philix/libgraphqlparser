@@ -18,6 +18,10 @@
 #include "parser.tab.hpp"
 #include "syntaxdefs.h"
 
+// In C++17, register is not a keyword anymore.
+// Define it away in lexer.h and lexer.cpp
+#define register
+
 // Keep track of token lengths.
 #define YY_USER_ACTION yyextra->loc.columns(yyleng);
 
